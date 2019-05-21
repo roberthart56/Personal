@@ -21,10 +21,18 @@ Digikey part 423-1134-1-ND found in the fab inventory.  Board designed after Nei
 [here](http://academy.cba.mit.edu/classes/input_devices/mic/hello.SPU0414HR5H.png).
 A 3.3 V regulator is included on the board so that it can be run from 5V on the Arduino board.  Quiescent output is ~1.5 V
 with waveform +/- around that level.  Same could be accomplished with another amplified microphone module, like
-[this one from Sparkfun](https://www.sparkfun.com/products/12642)
+[this one from Sparkfun](https://www.sparkfun.com/products/12642).  Microphone analog output is connected to
+an ADC channel of the Arduino.
+
 
 ![pic](buzz.jpg)
 ![pic](conversation.jpg)
+
+Buzz has a piezoelectric buzzer for a head. I think it is Digikey part 458-1081, which is kind of a luxury model.
+Buzz is connected to a digital output pin.  When the two are in proximity, the buzzer speaks.
+
+Software is [here](./sound_mar20c.txt).  The code provides a pulse of voltage to the buzzer to initiate the
+feedback. 
 
 
 </xmp>
